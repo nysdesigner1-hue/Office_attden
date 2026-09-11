@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./StaffLogin.css";
 import Notification from "./Notification";
 import Home from "./Home";
+import Admin from "./Admin";
 import axios from 'axios'
 const StaffLogin = () => {
   const [staffId, setStaffId] = useState("");
@@ -12,6 +13,7 @@ const StaffLogin = () => {
   const [type, setType] = useState(null)
   const [showHome, setShowHome] = useState(false)
   const [usrData, setUserData] = useState(null)
+  const [AdminData, setAdminData] = useState(null)
   const handleLogin = (e) => {
     e.preventDefault();
 
@@ -23,12 +25,21 @@ const StaffLogin = () => {
     const loginData = {staffId, password}
     axios.post(`/api/data`, loginData)
       .then(response => {
+
+        if(response.data.tag == "Admin") {
+            setAdminData(response.data)
+            return
+          }
+
         if (response.data.message === "user exist") {
           setShowHome(true);
           console.log(response.data.userId);
           const userDataGot = response.data.userId;
           setUserData(userDataGot);
-        } else {
+          
+        } 
+        
+        else {
           console.log(response.data);
           setmsg(response.data.message);
           setType("error");
@@ -132,6 +143,8 @@ console.log("This is user data " + usrData)
 
       </div>
     </div>)}
+
+    {AdminData.tag ? <Admin/> : null}
     </>
   );
 };
