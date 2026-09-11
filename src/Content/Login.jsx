@@ -20,7 +20,7 @@ const StaffLogin = () => {
       return;
     }
 
-    axios.get(`http://localhost:3001/api/data/${staffId}/${password}`).then(response => {
+    axios.get(`https://myserver-s4ss.onrender.com/api/data/${staffId}/${password}`).then(response => {
        console.log
         if(response.data.message == "user exist") {
         setShowHome(true)
