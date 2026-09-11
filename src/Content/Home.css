@@ -1,0 +1,549 @@
+/* =========================================
+   HOME PAGE
+   ========================================= */
+
+.home-page {
+  min-height: 100vh;
+  background: #f5f7fa;
+  color: #172033;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.home-header {
+  width: 100%;
+  min-height: 80px;
+  padding: 0 50px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.home-welcome {
+  margin: 0 0 4px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.home-header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.staff-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.profile-circle {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: #0f4c81;
+  color: #ffffff;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
+
+.home-content {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+  padding: 50px 25px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   ATTENDANCE CARD
+   ========================================= */
+
+.attendance-card {
+  width: 100%;
+  padding: 32px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.attendance-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-label {
+  margin: 0 0 8px;
+
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.attendance-card h2 {
+  margin: 0;
+
+  color: #172033;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.staff-id-icon {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: #edf5fb;
+  color: #0f4c81;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.attendance-divider {
+  height: 1px;
+  margin: 28px 0;
+
+  background: #edf0f4;
+}
+
+
+/* =========================================
+   ATTENDANCE STATS
+   ========================================= */
+
+.attendance-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.attendance-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.stat-label {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.attendance-stat strong {
+  color: #172033;
+  font-size: 27px;
+}
+
+.stat-small {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.status-present {
+  color: #15803d !important;
+}
+
+
+/* =========================================
+   MAKE ATTENDANCE SECTION
+   ========================================= */
+
+.make-attendance-section {
+  margin-top: 25px;
+  padding: 28px;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.attendance-action-icon {
+  width: 52px;
+  height: 52px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: #0f4c81;
+  color: #ffffff;
+
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.attendance-action-content {
+  flex: 1;
+}
+
+.attendance-action-content h3 {
+  margin: 0 0 6px;
+
+  font-size: 18px;
+  color: #172033;
+}
+
+.attendance-action-content p {
+  margin: 0;
+
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.make-attendance-button {
+  flex-shrink: 0;
+
+  height: 48px;
+  padding: 0 24px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #0f4c81;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.make-attendance-button:hover {
+  background: #0a3b66;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   CAMERA ERROR
+   ========================================= */
+
+.camera-error {
+  margin-top: 20px;
+  padding: 18px 20px;
+
+  border-left: 4px solid #dc2626;
+  border-radius: 8px;
+
+  background: #fef2f2;
+}
+
+.camera-error strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #b91c1c;
+  font-size: 14px;
+}
+
+.camera-error p {
+  margin: 0;
+
+  color: #7f1d1d;
+  font-size: 13px;
+}
+
+
+/* =========================================
+   CAMERA OVERLAY
+   ========================================= */
+
+.camera-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  background: rgba(15, 23, 42, 0.75);
+}
+
+
+/* =========================================
+   CAMERA MODAL
+   ========================================= */
+
+.camera-modal {
+  width: 100%;
+  max-width: 600px;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================
+   CAMERA HEADER
+   ========================================= */
+
+.camera-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 22px;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.camera-header h2 {
+  margin: 0 0 4px;
+
+  color: #172033;
+  font-size: 19px;
+}
+
+.camera-header p {
+  margin: 0;
+
+  color: #64748b;
+  font-size: 12px;
+}
+
+.camera-close {
+  width: 36px;
+  height: 36px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #f1f5f9;
+  color: #475569;
+
+  font-size: 23px;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   CAMERA
+   ========================================= */
+
+.camera-container {
+  position: relative;
+
+  width: 100%;
+
+  background: #0f172a;
+
+  overflow: hidden;
+}
+
+.camera-video {
+  display: block;
+
+  width: 100%;
+
+  aspect-ratio: 4 / 3;
+
+  object-fit: cover;
+}
+
+
+/* =========================================
+   FACE FRAME
+   ========================================= */
+
+.face-frame {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 190px;
+  height: 245px;
+
+  transform: translate(-50%, -50%);
+
+  border: 2px solid rgba(255, 255, 255, 0.9);
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 9999px rgba(0, 0, 0, 0.15);
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   CAMERA ACTIONS
+   ========================================= */
+
+.camera-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+
+  padding: 18px 22px;
+}
+
+.camera-cancel-button,
+.capture-button {
+  height: 46px;
+
+  padding: 0 20px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.camera-cancel-button {
+  border: 1px solid #d8dee8;
+
+  background: #ffffff;
+
+  color: #475569;
+}
+
+.capture-button {
+  border: none;
+
+  background: #0f4c81;
+
+  color: #ffffff;
+}
+
+.capture-button:hover {
+  background: #0a3b66;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  .home-header {
+    padding: 0 20px;
+  }
+
+  .home-content {
+    padding: 30px 15px;
+  }
+
+  .attendance-card {
+    padding: 24px;
+  }
+
+  .attendance-info {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .make-attendance-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .make-attendance-button {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .home-header {
+    min-height: 70px;
+  }
+
+  .home-header h1 {
+    font-size: 20px;
+  }
+
+  .staff-profile span:last-child {
+    display: none;
+  }
+
+  .attendance-card h2 {
+    font-size: 25px;
+  }
+
+  .camera-actions {
+    flex-direction: column;
+  }
+
+  .camera-cancel-button,
+  .capture-button {
+    width: 100%;
+  }
+
+  .face-frame {
+    width: 150px;
+    height: 205px;
+  }
+}
