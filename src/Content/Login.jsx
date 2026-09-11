@@ -16,30 +16,33 @@ const StaffLogin = () => {
     e.preventDefault();
 
     if (!staffId || !password) {
-      setMessage(true)
+      setMessage(true);
       return;
     }
 
-    axios.get(`https://myserver-s4ss.onrender.com/api/data/${staffId}/${password}`).then(response => {
-       console.log
-        if(response.data.message == "user exist") {
-        setShowHome(true)
-        console.log(response.data.userId)
-        const userDataGot = response.data.userId
-        setUserData(userDataGot)
-    } 
-    
-    else {
- console.log(response.data)
-        setmsg(response.data.message)
-        setType("error")
-        setMessage(true)
-    }
+    const loginData = {staffId, password}
+    axios.post(`/api/data`, loginData)
+      .then(response => {
+        if (response.data.message === "user exist") {
+          setShowHome(true);
+          console.log(response.data.userId);
+          const userDataGot = response.data.userId;
+          setUserData(userDataGot);
+        } else {
+          console.log(response.data);
+          setmsg(response.data.message);
+          setType("error");
+          setMessage(true);
+        }
+      })
+      .catch(error => {
+        console.error("Login Error:", error);
+        setmsg("Server error, please try again.");
+        setType("error");
+        setMessage(true);
+      });
 
-    })
-    // Backend API login yahan add kar sakte ho
     console.log("Staff ID:", staffId);
-    console.log("Password:", password);
   };
 console.log("This is user data " + usrData)
   return (
